@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jigexd的网站3.0</title>
+
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+      }
+      /* *{
+        border:1px solid rgb(152, 149, 149);
+      } */
+      .flex {
+        display: flex;
+      }
+      .yinying {
+        box-shadow: 1px 1px 2px #2db5a3;
+      }
+      .baise{
+        background-color: rgba(2, 2, 2, 0.949);
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .daohang {
+        padding: 20px 20px;
+        border-bottom: 3px solid rgb(159, 83, 83);
+        font-size: 14px;
+        color: rgb(0, 0, 0);
+      }
+      .duanluo
+       {
+        display: flex;
+        color: rgb(57, 170, 132);
+        align-self: center;
+        justify-content:center;
+        font-size: 30px;
+      }
+      .zhenwen1
+      {
+       display: flex;
+        color: rgb(23, 148, 232);
+        align-self: center;
+        justify-content:center;
+        font-size: 17px; 
+      }
+      .zhenwen2
+      {
+       display: flex;
+        color: rgb(158, 211, 246);
+        align-self: center;
+        justify-content:center;
+        font-size: 10px; 
+      }
+      @media (max-width: 700px) {
+        .cebian {
+          display: none;
+        }
+        .neiong {
+          flex-direction: column;
+        }
+        .neirong {
+          flex-direction: column;
+        }
+        .shujuqu {
+          flex-direction: column;
+        }
+        .youqu {
+          margin-left: 8px;
+        }
+        .shujukuai {
+          margin: 0 0 8px;
+          flex: auto;
+        }
+       
+      }
+      :root {
+        --twinkle-duration: 4s;
+      }
+      .stars-wrapper {
+        background: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          from(#2d2d57),
+          color-stop(#1f1f3a),
+          to(#150c1f)
+        );
+        background: linear-gradient(#161636, #010105, #8e74ae);
+        overflow: hidden;
+        height: 100vh;
+      }
+      .stars0,
+      .stars1,
+      .stars2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        -webkit-animation: twinkle var(--twinkle-duration) ease-in-out infinite;
+        animation: twinkle var(--twinkle-duration) ease-in-out infinite;
+      }
+      .stars0 {
+        -webkit-animation-delay: calc(var(--twinkle-duration) * -0.22);
+        animation-delay: calc(var(--twinkle-duration) * -0.22);
+      }
+      .stars1 {
+        -webkit-animation-delay: calc(var(--twinkle-duration) * -0.44);
+        animation-delay: calc(var(--twinkle-duration) * -0.44);
+      }
+      .stars2 {
+        -webkit-animation-delay: calc(var(--twinkle-duration) * -0.66);
+        animation-delay: calc(var(--twinkle-duration) * -0.66);
+      }
+      @-webkit-keyframes twinkle {
+        25% {
+          opacity: 0;
+        }
+      }
+      @keyframes twinkle {
+        25% {
+          opacity: 0;
+        }
+      }
+      .star {
+        fill: rgb(246, 247, 244);
+      }
+      .star:nth-child(3n) {
+        opacity: 0.8;
+      }
+      .star:nth-child(7n) {
+        opacity: 0.6;
+      }
+      .star:nth-child(13n) {
+        opacity: 0.4;
+      }
+      .star:nth-child(19n) {
+        opacity: 0.2;
+      }
+    </style>
+  </head>
+  <body class="stars-wrapper flex">
+    <script>
+      for (var i = 0; i < 3; i++) {
+        var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svg.setAttribute("class", "stars" + i);
+        svg.setAttribute("width", "100%");
+        svg.setAttribute("height", "100%");
+        svg.setAttribute("preserveAspectRatio", "none");
+        for (let j = 0; j < 100; j++) {
+          var circle = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "circle"
+          );
+          circle.setAttribute("class", "star");
+          circle.setAttribute("cx", r(0, 100) + "%");
+          circle.setAttribute("cy", r(0, 100) + "%");
+          circle.setAttribute("r", r(0.5, 3));
+          svg.appendChild(circle);
+        }
+        document.getElementsByClassName("stars-wrapper")[0].appendChild(svg);
+      }
+
+      function r(m, n) {
+        return (Math.random() * (n - m) + m).toFixed(2);
+      }
+    </script>
+     </div>
+    <!--侧边栏-->
+    <div style="width: 150px; z-index: 2" class=" yinying  cebian">
+      <!-- 头像栏 -->
+      <div
+        style="
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 2px solid #0b0909;
+        "
+        class="flex"
+      >
+        <img
+          src="https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2019%2F11%2F08%2F37e79f254c80481d91e1d77260d31e53.jpeg&thumbnail=660x2147483647&quality=80&type=jpg"
+          width="120px"
+          alt="jojo"
+        />
+        <div style="margin-left: 3px">jojo</div>
+      </div class="flex1">
+      <!-- 导航栏 -->
+      <div class="daohang">
+        <a href="https://www.bilibili.com/video/BV1zu4m1g7Yd/?spm_id_from=333.337.search-card.all.click&vd_source=005b633d2f9cd967252931bbb2d1626b">动漫</a>
+      </div>
+      <div class="daohang">
+        <a href="https://www.bilibili.com/video/BV1k7411x7gA/?spm_id_from=333.337.search-card.all.click&vd_source=005b633d2f9cd967252931bbb2d1626b">偶像</a>
+    </div>
+      <div class="daohang">
+        <a href="https://www.bilibili.com/video/BV1Eb411u7Fw/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&vd_source=005b633d2f9cd967252931bbb2d1626b">爱看</a>
+    </div>
+      <div class="daohang">
+        <a href="https://chat18.aichatos.xyz/#/chat/1702277611335">GPT</a>
+    </div>
+      <div class="daohang">
+        <a href="https://www.baidu.com">其他</a>
+    </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex1 flex column">
+      <!-- 头部栏-->
+      <div style="height: 60px; z-index: 2" class=" yinying">
+      <p style="display: flex;
+        color: rgb(239, 12, 50);
+        align-self: center;
+        justify-content:center;
+        font-size: 20px;
+        font-weight:bold;
+        ">jingexjojo的网站</p>
+      </div>
+      <!-- 内容区-->
+      <div style="overflow: auto" class="flex1 flex neirong">
+        <!--左区-->
+        <div style="flex: 4" class="flex column mg8">
+          <!--数据区-->
+          <div class="flex shujuqu">
+            <!-- 数据块 -->
+            <div class="shujukuai flex1  yinying mgr8" style="height: 160px">
+           <img
+          src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.nga.178.com%2Fattachments%2Fmon_202011%2F23%2F-9lddQ5-g4wpXqZ7bT3cS3y8-280.jpeg&refer=http%3A%2F%2Fimg.nga.178.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1716568064&t=70cb381571a1e4037c8d80b5d20982f6"
+          width="300px"
+          alt="jojo"
+        />
+            </div>
+            <div class="shujukuai flex1  yinying" style="height: 100px ">
+           <img
+          src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.nga.178.com%2Fattachments%2Fmon_202011%2F23%2F-9lddQ5-g4wpXqZ7bT3cS3y8-280.jpeg&refer=http%3A%2F%2Fimg.nga.178.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1716568064&t=70cb381571a1e4037c8d80b5d20982f6"
+          width="300px"
+          alt="jojo"
+        />
+          </div>
+          </div>
+          <!--列表区-->
+          <div class="flex column">
+            <!-- 列表项 -->
+            <div class=" yinying mgt8 " style="height: 400px">
+            <p class="zhenwen1">将进酒</p>
+              <p class="zhenwen2">李白</p>    
+              <p class="zhenwen2">
+              <p class="zhenwen2">君不见黄河之水天上来，奔流到海不复回。</p>
+              <p class="zhenwen2">君不见高堂明镜悲白发，朝如青丝暮成雪。</p>
+              <p class="zhenwen2">人生得意须尽欢，莫使金樽空对月。</p>
+              <p class="zhenwen2">天生我材必有用，千金散尽还复来。</p>
+              <p class="zhenwen2">烹羊宰牛且为乐，会须一饮三百杯。</p>
+              <p class="zhenwen2">岑夫子，丹丘生，将进酒，杯莫停。</p>
+              <p class="zhenwen2">与君歌一曲，请君为我倾耳听。</p>
+              <p class="zhenwen2">钟鼓馔玉不足贵，但愿长醉不愿醒。</p>
+              <p class="zhenwen2">古来圣贤皆寂寞，惟有饮者留其名。</p>
+              <p class="zhenwen2">陈王昔时宴平乐，斗酒十千恣欢谑。</p>
+              <p class="zhenwen2">主人何为言少钱，径须沽取对君酌。</p>
+              <p class="zhenwen2">五花马、千金裘，呼儿将出换美酒，与尔同销万古愁。</p>
+            </div>
+            <div class=" yinying mgt8" style="height: 180px">
+            <p class="zhenwen1">闻官军收河南河北</p>
+              <p class="zhenwen2"> 杜甫 </p>
+              <p class="zhenwen2">剑外忽传收蓟北，初闻涕泪满衣裳。</p>
+              <p class="zhenwen2">却看妻子愁何在，漫卷诗书喜欲狂。</p>
+              <p class="zhenwen2">白日放歌须纵酒，青春作伴好还乡。</p>
+              <p class="zhenwen2">即从巴峡穿巫峡，便下襄阳向洛阳。</p>
+            </div>
+          </div>
+        </div>
+        <!--右区-->
+        <div style="flex: 1" class="flex column mgr8 mgt8 youqu">
+          <!-- 提示区 -->
+          <div style="height: 300px;color: rgb(52, 99, 140);font-size: 10px;" class=" yinying">
+          <p>本站用于学习，谢谢。
+            <p>操,不知道为什么链接会失效。气愤</p>
+          </p>
+          </div>
+          <!-- 消息区 -->
+          <div style="height: 130px;color: rgb(51, 112, 166);font-size: 12;" class=" yinying mgt8">
+          <a href="https://space.bilibili.com/646545918" target="_blank">我的b站号</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
